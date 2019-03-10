@@ -3,7 +3,7 @@ FROM reasno/redis-tdigest:latest as tdigest
 FROM reasno/topk:latest as topk
 FROM redislabs/rebloom:latest as rebloom
 
-FROM redis:latest as redis
+FROM redis:5 as redis
 ENV LIBDIR /usr/lib/redis/modules
 WORKDIR /data
 RUN set -ex;\
